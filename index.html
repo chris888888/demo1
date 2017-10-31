@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<title>网页简易计算器</title>
+		<script>
+			var A1=0,A2=0,A3=0,A4=0;
+			function caculate(){
+				if(A4==1){A2=A3+A1}
+				else if(A4==2){A2=A3-A1}
+				else if(A4==3){A2=A3*A1}
+				else {A2=A3/A1};
+				document.getElementById('txt_result').value=A2;
+			};
+			function clearto(){
+				document.getElementById('txt_result').value=0;
+				A1=0,A2=0,A3=0,A4=0;
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<input type="text" id="txt_result" value=""> </br>
+			<button id="b1" onclick="A1=1;document.getElementById('txt_result').value=A1">1</button>
+			<button id="b2"onclick="A1=2; document.getElementById('txt_result').value=A1">2</button>
+			<button id="b3"onclick="A1=3;document.getElementById('txt_result').value=A1">3</button></br>
+			<button id="b4"onclick="A1=4; document.getElementById('txt_result').value=A1">4</button>
+			<button id="b5"onclick="A1=5;  document.getElementById('txt_result').value=A1">5</button>
+			<button id="b6"onclick="A1=6; document.getElementById('txt_result').value=A1">6</button></br>
+			<button id="b7"onclick="A1=7; document.getElementById('txt_result').value=A1">7</button>
+			<button id="b8"onclick="A1=8; document.getElementById('txt_result').value=A1 ">8</button>
+			<button id="b9"onclick="A1=9;  document.getElementById('txt_result').value=A1">9</button></br>
+			<button id="b0"onclick="A1=0;  document.getElementById('txt_result').value=A1">0</button>
+			<button id="caculate" onclick="caculate()">计算=</button>  
+			<button id="clear" onclick="clearto()">清除</button></br>
+			
+			<button id="a1" onclick="A3=A1;A4=1 ">+</button>
+			<button id="a2" onclick="A3=A1;A4=2">-</button>
+			<button id="a3" onclick="A3=A1;A4=3">*</button>
+			<button id="a4" onclick="A3=A1;A4=4">/</button></br>
+	   </div>
+	</body>
+</html>
